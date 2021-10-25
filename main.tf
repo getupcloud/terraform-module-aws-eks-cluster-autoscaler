@@ -1,5 +1,5 @@
 locals {
-  name_prefix = substr("eks-cluster-autoscaler-${var.cluster_name}", 0, 32)
+  name_prefix = substr("${var.cluster_name}-cluster-autoscaler", 0, 32)
 }
 
 data "aws_iam_policy_document" "cluster_autoscaler" {
